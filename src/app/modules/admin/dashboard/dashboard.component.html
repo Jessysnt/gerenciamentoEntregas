@@ -1,0 +1,97 @@
+<div class="flex flex-col flex-auto w-full">
+
+  <div class="flex flex-wrap w-full max-w-screen-xl mx-auto p-6 md:p-8">
+
+    <div class="flex items-center justify-between w-full">
+      <h2 class="text-3xl font-semibold tracking-tight leading-8">Dashboard de Entregas</h2>
+    </div>
+
+    <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 w-full mt-8">
+      <div class="xl:col-span-4 flex flex-col flex-auto bg-card shadow rounded-2xl overflow-hidden">
+
+        <div class="p-6">
+          <div class="mr-4 text-lg font-medium tracking-tight leading-6 truncate">Andamento das Entregas por
+            Motorista</div>
+        </div>
+
+        <div class="overflow-x-auto mx-6">
+          <table class="w-full bg-transparent" mat-table [dataSource]="motoristasData">
+            <ng-container matColumnDef="motorista">
+              <th mat-header-cell *matHeaderCellDef> Motorista </th>
+              <td mat-cell *matCellDef="let element"> {{ element.motorista }} </td>
+            </ng-container>
+            <ng-container matColumnDef="total_entregas">
+              <th mat-header-cell *matHeaderCellDef> Total de Entregas </th>
+              <td mat-cell *matCellDef="let element"> {{ element.total_entregas }} </td>
+            </ng-container>
+            <ng-container matColumnDef="entregas_realizadas">
+              <th mat-header-cell *matHeaderCellDef> Entregas Realizadas </th>
+              <td mat-cell *matCellDef="let element"> {{ element.entregas_realizadas }} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="motoristasDisplayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: motoristasDisplayedColumns;"></tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 w-full mt-8">
+      <div class="xl:col-span-4 flex flex-col flex-auto bg-card shadow rounded-2xl overflow-hidden">
+
+        <div class="p-6">
+          <div class="mr-4 text-lg font-medium tracking-tight leading-6 truncate">Entregas com Insucesso por Motorista
+          </div>
+        </div>
+
+        <div class="overflow-x-auto mx-6">
+          <table class="w-full bg-transparent" mat-table [dataSource]="insucessoData">
+            <ng-container matColumnDef="motorista">
+              <th mat-header-cell *matHeaderCellDef> Motorista </th>
+              <td mat-cell *matCellDef="let element"> {{ element.motorista }} </td>
+            </ng-container>
+            <ng-container matColumnDef="insucesso">
+              <th mat-header-cell *matHeaderCellDef> Entregas com Insucesso </th>
+              <td mat-cell *matCellDef="let element"> {{ element.insucesso }} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="insucessoDisplayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: insucessoDisplayedColumns;"></tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 w-full mt-8">
+      <div class="xl:col-span-4 flex flex-col flex-auto bg-card shadow rounded-2xl overflow-hidden">
+
+        <div class="p-6">
+          <div class="mr-4 text-lg font-medium tracking-tight leading-6 truncate">Andamento das Entregas por Bairro
+          </div>
+        </div>
+
+        <div class="overflow-x-auto mx-6">
+          <table class="w-full bg-transparent" mat-table [dataSource]="bairroData">
+            <ng-container matColumnDef="bairro">
+              <th mat-header-cell *matHeaderCellDef> Bairro </th>
+              <td mat-cell *matCellDef="let element"> {{ element.bairro }} </td>
+            </ng-container>
+            <ng-container matColumnDef="total_bairro">
+              <th mat-header-cell *matHeaderCellDef> Total de Entregas </th>
+              <td mat-cell *matCellDef="let element"> {{ element.total_bairro }} </td>
+            </ng-container>
+            <ng-container matColumnDef="entregas_realizadas">
+              <th mat-header-cell *matHeaderCellDef> Entregas Realizadas </th>
+              <td mat-cell *matCellDef="let element"> {{ element.entregas_realizadas }} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="bairroDisplayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: bairroDisplayedColumns;"></tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
