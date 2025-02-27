@@ -55,7 +55,7 @@ export const appRoutes: Route[] = [
             layout: 'empty'
         },
         children: [
-            {path: 'home', loadChildren: () => import('app/modules/landing/home/home.routes')},
+            
         ]
     },
 
@@ -69,7 +69,6 @@ export const appRoutes: Route[] = [
             initialData: initialDataResolver
         },
         children: [
-            {path: 'example', loadChildren: () => import('app/modules/admin/example/example.routes')},
             {path: 'dashboard', loadChildren: () => import('app/modules/admin/dashboard/dashboard.routes')},
             {path: 'lista-entregas', loadChildren: () => import('app/modules/lista-entregas/lista-entregas.routes')},
         ]
