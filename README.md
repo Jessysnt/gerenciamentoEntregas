@@ -1,4 +1,4 @@
-# Desafio Front-end - Logística com Gerenciamento de Transporte
+# Gerenciamento de Transporte
 
 ## Descrição
 
@@ -44,6 +44,22 @@ ng serve
 ```
 
 A aplicação ficará disponível em `http://localhost:4200/`
+
+### 4. Deploy no Netlify
+
+O projeto pode ser implantado automaticamente no Netlify a partir da branch master. Após cada merge na master, o Netlify executa um novo build e disponibiliza a aplicação.
+
+**Acesso à Aplicação**
+
+- URL: https://gerenciamento-de-entregas.netlify.app
+
+- Credenciais:
+
+    - **E-mail: jess.santos@teste.com**
+
+    - **Senha: admin**
+
+
 
 ## Funcionalidades Implementadas
 
