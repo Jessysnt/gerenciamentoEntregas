@@ -82,6 +82,3 @@ O projeto conta com testes unitários para os componentes e serviços essenciais
 ng test
 ```
 
-## Contato
-
-Caso tenha dúvidas ou sugestões, entre em contato pelo [seu email ou GitHub].
